@@ -27,6 +27,7 @@ return new class extends Migration
             $table->date('regular holiday');
             $table->date('registration_date');
             $table->date('update_date');
+            $table->integer('category_id')->unsigned();
             $table->timestamps();
         });
     }
