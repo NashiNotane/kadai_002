@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('shops', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->text('description');
@@ -21,10 +21,10 @@ return new class extends Migration
             $table->integer('min_price')->unsigned();
             $table->datetime('close_time');
             $table->datetime('open_time');
-            $table->string('郵便番号');
-            $table->string('住所');
-            $table->string('電話番号');
-            $table->date('regular holiday');
+            $table->string('postal_number');
+            $table->string('adress');
+            $table->string('phone_number');
+            $table->date('regular_holiday');
             $table->date('registration_date');
             $table->date('update_date');
             $table->integer('category_id')->unsigned();
@@ -39,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('shops');
     }
 };
