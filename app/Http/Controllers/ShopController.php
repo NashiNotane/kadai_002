@@ -8,7 +8,7 @@ use App\Models\Shop;
 class ShopController extends Controller
 {
     public function index(){
-       $shops=Shop::all();
+        $shops = shop::paginate(15);
        return view('shop.index',compact('shops'));
     }
 }
