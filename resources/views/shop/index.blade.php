@@ -23,7 +23,6 @@
                  @endforeach
              </div>
          </div>
-         {{ $shops->links() }}
      </div>
  </div>
  @endsection
